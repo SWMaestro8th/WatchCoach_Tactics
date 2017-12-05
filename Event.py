@@ -39,6 +39,9 @@ class Event:
         return player_circles, ball_circle
 
     def show(self, x):
+        plt.clf()
+        plt.cla()
+        plt.close()
         # Leave some space for inbound passes
         ax = plt.axes(xlim=(Constant.X_MIN,
                             Constant.X_MAX),
@@ -104,4 +107,3 @@ class Event:
                                             Constant.Y_MAX, Constant.Y_MIN])
         # plt.show()
         anim.save(str(x) + '.mp4')
-        plt.gcf().clear()

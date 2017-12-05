@@ -31,8 +31,11 @@ if __name__ == '__main__':
     #                             one of the game)""")
     #
     # args = parser.parse_args()
-    for x in range(0, 30):
-        game = Game(path_to_json="0021500492.json", event_index=x)
-        game.read_json()
-        game.start(x)
-        print(str(x) + "done");
+    for x in range(9,50):
+        try:
+            game = Game(path_to_json="0021500492.json", event_index=x)
+            game.read_json()
+            game.start(x)
+            print(str(x) + "done");
+        except:
+            print("error"+str(x))
